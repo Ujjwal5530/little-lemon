@@ -6,12 +6,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.malhotra.littlelemon.network.MenuNetworkLocal
 import com.malhotra.littlelemon.screens.Home
 import com.malhotra.littlelemon.screens.Onboarding
 import com.malhotra.littlelemon.screens.Profile
 
 @Composable
-fun Navigation(navController : NavHostController) {
+fun Navigation(navController : NavHostController, items : List<MenuNetworkLocal>) {
     val sharedPreferences = LocalContext.current.getSharedPreferences("User", Context.MODE_PRIVATE)
     val isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
     
@@ -23,7 +24,7 @@ fun Navigation(navController : NavHostController) {
         Onboarding.route
     }) {
         composable(Home.route){
-            Home(navController)
+            Home(navController, items)
         }
 
         composable(Onboarding.route){
