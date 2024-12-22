@@ -1,23 +1,44 @@
-# Little Lemon
+# Little Lemon Restaurant App
 
-Little lemon is the Capstone project for Meta's Android Developer Course on Coursera made in Kotlin.
+## What it does:
+
+This Android application allows users to explore the Little Lemon restaurant menu, view dishes with descriptions and prices, and filter the menu by category. It also includes basic user authentication and profile management features.
+
+## What it is:
+
+An Android mobile application developed using Kotlin.
 
 ## Screenshot
 <img width="500" alt="Screenshot" src="https://github.com/sDevPrem/little-lemon/assets/130966261/4ce16a10-c0a4-43bb-b3f9-e8dc084bb154">
 
-## Built With
+## Technologies Used:
 
-**[Kotlin:](https://kotlinlang.org/)** As the programming language.
+* **[Kotlin:](https://kotlinlang.org/)** Primary programming language.
+* **[ktor:](https://ktor.io/)** For network requests and data fetching.
+* **[Room:](https://developer.android.com/training/data-storage/room)** For local data storage.
+* **[Glide Compose:](https://bumptech.github.io/glide/int/compose.html)** To load images asynchronously.
+* **[SharedPreferences:](https://developer.android.com/training/data-storage/shared-preferences)** For storing user preferences (e.g., login credentials).
+* **[Jetpack Compose:](https://developer.android.com/jetpack/compose/documentation)** For building the user interface.
+* **[Jetpack Navigation:](https://developer.android.com/jetpack/compose/navigation)** For navigation between screens.
 
-**[ktor:](https://ktor.io/)** For fetching data asynchronously from the server.
+## Ambition:
 
-**[Jetpack Compose:](https://developer.android.com/jetpack/compose/documentation)** To make the UI.
+This project was undertaken to learn and practice key Android development concepts, including:
 
-**[Room:](https://developer.android.com/training/data-storage/room)** To cache the network data locally.
+* **Modern Android development with Kotlin and Jetpack Compose.**
+* **Data persistence using Room Database and SharedPreferences.**
+* **Network requests and data handling with Ktor.**
+* **User authentication and authorization.**
+* **Implementing basic UI/UX design principles.**
 
-**[Glide Compose:](https://bumptech.github.io/glide/int/compose.html)** To load images asynchronously.
+## Current Stage:
 
-**[Jetpack Navigation:](https://developer.android.com/jetpack/compose/navigation)** For navigation between screens.
+This project is currently a proof of concept.
+
+## Known Issues and Limitations:
+
+* **Limited Functionality:** Currently, the app only supports user login, profile management, menu display, filtering, and basic searching. Features such as order placement, payment integration, and order tracking are not yet implemented.
+* **Data Source:** The app currently uses static data for the menu. Integrating with a real-time database or API would enhance the application's functionality. 
 
 ## Installation
 
