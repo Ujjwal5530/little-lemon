@@ -2,12 +2,14 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("org.jetbrains.kotlin.plugin.serialization")
-    id("kotlin-kapt")
+    id("com.google.devtools.ksp")
+    alias(libs.plugins.kotlin.compose)
+    //id("kotlin-kapt")
 }
 
 android {
     namespace = "com.malhotra.littlelemon"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.malhotra.littlelemon"
@@ -69,7 +71,8 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.7.5")
     implementation ("com.github.bumptech.glide:compose:1.0.0-alpha.1")
     implementation("androidx.room:room-runtime:2.4.3")
-    kapt("androidx.room:room-compiler:2.4.3")
+    //kapt("androidx.room:room-compiler:2.4.3")
+    ksp("androidx.room:room-compiler:2.5.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
